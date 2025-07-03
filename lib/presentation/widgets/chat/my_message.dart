@@ -16,10 +16,7 @@ class MyMessage extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Text(
-              'This is my message',
-              style: TextStyle(color: Colors.white),
-            ),
+            child: Text('CR7', style: TextStyle(color: Colors.white)),
           ),
         ),
         const SizedBox(height: 5),

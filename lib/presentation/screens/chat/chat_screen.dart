@@ -1,3 +1,4 @@
+import 'package:chat_app/presentation/widgets/chat/his_message.dart';
 import 'package:chat_app/presentation/widgets/chat/my_message.dart';
 import 'package:flutter/material.dart';
 
@@ -33,9 +34,11 @@ class _ChatView extends StatelessWidget {
           children: [
             Expanded(
               child: ListView.builder(
-                itemCount: 50,
+                itemCount: 4,
                 itemBuilder: (context, index) {
-                  return const MyMessage();
+                  return (index % 2 == 0)
+                      ? const HisMessage()
+                      : const MyMessage();
                 },
               ),
             ),
