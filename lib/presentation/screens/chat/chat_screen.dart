@@ -11,6 +11,7 @@ class ChatScreen extends StatelessWidget {
     // Variables
     String urlImage =
         'https://assets.goal.com/images/v3/blt2aaca933046f8b00/Cristiano%20Ronaldo%20Portugal%202024%20(4).jpg?auto=webp&format=pjpg&width=3840&quality=60';
+
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
@@ -35,7 +36,7 @@ class _ChatView extends StatelessWidget {
           children: [
             Expanded(
               child: ListView.builder(
-                itemCount: 4,
+                itemCount: 2,
                 itemBuilder: (context, index) {
                   return (index % 2 == 0)
                       ? const HisMessage()
