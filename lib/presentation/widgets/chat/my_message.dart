@@ -1,7 +1,10 @@
+import 'package:chat_app/domain/entities/message.dart';
 import 'package:flutter/material.dart';
 
 class MyMessage extends StatelessWidget {
-  const MyMessage({super.key});
+  final Message message;
+  const MyMessage({super.key, required this.message});
+
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,7 @@ class MyMessage extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Text('CR7', style: TextStyle(color: Colors.white)),
+            child: Text(message.text, style: TextStyle(color: Colors.white)),
           ),
         ),
         const SizedBox(height: 5),
