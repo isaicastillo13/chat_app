@@ -10,7 +10,11 @@ class YesNoAnswer {
 
     final response = await _dio.get('https://yesno.wtf/api');
     print(response.data);
-    
-    throw UnimplementedError();
+
+   return Message(
+      text: response.data['answer'],
+      fromWho: FromWho.her,
+      urlImg: response.data['image'],
+    );
   }
 }
