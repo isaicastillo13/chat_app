@@ -9,8 +9,8 @@ class YesNoAnswer {
   Future<Message> getAnswer() async{
 
     final response = await _dio.get('https://yesno.wtf/api');
-    
     print(response.data);
+    
     throw UnimplementedError();
   }
 }
